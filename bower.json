@@ -1,0 +1,21 @@
+{
+  "name": "angular-ssh",
+  "homepage": "https://github.com/R3nPi2/angular-ssh",
+  "authors": [
+    "R3nPi2 <r3npi2@gmail.com>"
+  ],
+  "description": "Angular SSH Client",
+  "main": "angular-ssh.js",
+  "keywords": [
+    "ssh",
+    "ssh client"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
