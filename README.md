@@ -1,6 +1,6 @@
 # Angular SSH Client
 
-An Angular SSH Client implementation using cordova-plugin-sshclient https://github.com/R3nPi2/cordova-plugin-sshclient
+An Angular SSH Client implementation using [Cordova SSH Plugin](https://github.com/R3nPi2/cordova-plugin-sshclient).
 
 ## Supported Platforms
 
