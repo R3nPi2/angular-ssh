@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git://github.com/R3nPi2/angular-ssh.git"
   },  
-  "dependencies": { 
-    "cordova-plugin-sshclient": "git://github.com/R3nPi2/cordova-plugin-sshclient.git"
-  },
   "main": "angular-ssh.js",
   "keywords": [
     "ssh",

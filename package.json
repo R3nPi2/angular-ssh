@@ -18,7 +18,4 @@
     "url" : "https://github.com/R3nPi2/angular-ssh.git"
   },
   "license": "SEE LICENSE FILE",
-  "dependencies" : { 
-    "cordova-plugin-sshclient" : "git://github.com/R3nPi2/cordova-plugin-sshclient.git"
-  }
 }
