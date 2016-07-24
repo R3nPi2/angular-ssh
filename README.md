@@ -109,15 +109,13 @@ angular.module('myApp', ['angular-ssh']).
 });
 ```
 
-## Service `$ssh`
-
-### Methods
+## Service `$ssh` Methods
 
 All methods return a AngularJS Promise. For more information about promises read [AngularJS documentation](https://docs.angularjs.org/api/ng/service/$q).
 
 All methods are based on cordova-plugin-sshclient methods, so read [plugin documentation](https://github.com/R3nPi2/cordova-plugin-sshclient) if your need more information.
 
-#### `$ssh.openSession(hostname,user,password,cols,rows).then(function(success){...},function(error){...})`
+### `$ssh.openSession(hostname,user,password,cols,rows).then(function(success){...},function(error){...})`
 
 Connects to host, request a new PTY and starts a Shell.
 
@@ -137,7 +135,7 @@ Connects to host, request a new PTY and starts a Shell.
 
   - Returns a string describing the error.
 
-#### `$ssh.verifyHost(hostname,saveHostKey).then(function(success){...},function(error){...})`
+### `$ssh.verifyHost(hostname,saveHostKey).then(function(success){...},function(error){...})`
 
 We should use this method to verify hostkeys.
 
@@ -157,7 +155,7 @@ We should use this method to verify hostkeys.
 
   - Returns a string describing the error.
 
-#### `$ssh.resizeWindow(cols,rows,width,height).then(function(success){...},function(error){...})`
+### `$ssh.resizeWindow(cols,rows,width,height).then(function(success){...},function(error){...})`
 
 We can use this method to resize PTY created on `$ssh.openSession`.
 
@@ -176,7 +174,7 @@ We can use this method to resize PTY created on `$ssh.openSession`.
 
   - Returns a string describing the error.
 
-#### `$ssh.read().then(function(success){...},function(error){...})`
+### `$ssh.read().then(function(success){...},function(error){...})`
 
 Read stdout and stderr buffers output.
 
@@ -188,7 +186,7 @@ Read stdout and stderr buffers output.
 
   - Returns a string describing the error.
 
-#### `$ssh.write(string).then(function(success){...},function(error){...})`
+### `$ssh.write(string).then(function(success){...},function(error){...})`
 
 Write a string to stdin buffer.
 
@@ -204,7 +202,7 @@ Write a string to stdin buffer.
 
   - Returns a string describing the error.
 
-#### `$ssh.closeSession().then(function(success){...},function(error){...})`
+### `$ssh.closeSession().then(function(success){...},function(error){...})`
 
 Close ssh session.
 
