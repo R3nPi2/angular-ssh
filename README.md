@@ -6,4 +6,4 @@ An Angular SSH Client implementation using cordova-plugin-sshclient https://gith
 
 Install cordova-plugin-sshclient from repository:
 
-`cordova plugin install https://github.com/R3nPi2/cordova-plugin-sshclient`
+`cordova plugin install https://github.com/R3nPi2/cordova-plugin-sshclient.git`
