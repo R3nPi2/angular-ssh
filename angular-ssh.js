@@ -24,7 +24,7 @@ angular.module('angular-ssh', [])
     openSession: function (hostname,username,password,cols,rows) {
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
-        q.reject('cordova-sshclient not present');
+        q.reject('cordova-plugin-sshclient not present');
       } else {
         $window.sshClient.sshOpenSession(function(response){
           q.resolve(response);
@@ -38,7 +38,7 @@ angular.module('angular-ssh', [])
     read: function() {
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
-        q.reject('cordova-sshclient not present');
+        q.reject('cordova-plugin-sshclient not present');
       } else {
         $window.sshClient.sshRead(function(response){
           q.resolve(response);
@@ -52,7 +52,7 @@ angular.module('angular-ssh', [])
     write: function(line){
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
-        q.reject('cordova-sshclient not present');
+        q.reject('cordova-plugin-sshclient not present');
       } else {
         $window.sshClient.sshWrite(function(response){
           q.resolve(response);
@@ -66,7 +66,7 @@ angular.module('angular-ssh', [])
     closeSession: function() {
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
-        q.reject('cordova-sshclient not present');
+        q.reject('cordova-plugin-sshclient not present');
       } else {
         $window.sshClient.sshCloseSession(function(response){
           q.resolve(response);
@@ -80,7 +80,7 @@ angular.module('angular-ssh', [])
     verifyHost: function(hostname,addhost){
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
-        q.reject('cordova-sshclient not present');
+        q.reject('cordova-plugin-sshclient not present');
       } else {
         $window.sshClient.sshVerifyHost(function(response){
           q.resolve(response);
@@ -94,7 +94,7 @@ angular.module('angular-ssh', [])
     resizeWindow: function(x,y,pixels_x,pixels_y){
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
-        q.reject('cordova-sshclient not present');
+        q.reject('cordova-plugin-sshclient not present');
       } else {
         $window.sshClient.sshResizeWindow(function(response){
           q.resolve(response);
