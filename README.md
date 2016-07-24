@@ -35,7 +35,11 @@ angular.module('myApp', ['angular-ssh']).
   $scope.cols = "80";
   $scope.rows = "25";
 
-  //We have to make shure to run our code after 'deviceready' or 'cordova-plugin-sshclient' could not be loaded yet. We can do it like this (with our code inside 'deviceready' listener) or any other way. "$scope.$watch('openSessionFin', ... " could be a good idea, or launch angular bootstrap inside 'deviceready' listener, like this: "angular.bootstrap(document.querySelector('body'), ['myApp'])".
+  // We have to make shure to run our code after 'deviceready' or 'cordova-plugin-sshclient' 
+  // could not be loaded yet. We can do it like this (with our code inside 'deviceready' listener) 
+  // or any other way. "$scope.$watch('openSessionFin', ... " could be a good idea, or launch angular 
+  // bootstrap inside 'deviceready' listener, like this: 
+  // "angular.bootstrap(document.querySelector('body'), ['myApp'])".
 
   document.addEventListener('deviceready', function() {
 
@@ -44,7 +48,7 @@ angular.module('myApp', ['angular-ssh']).
       var connect = false;
       var save = false;
 
-      //Host key is not in known_hosts
+      // Host key is not in known_hosts
       if (resp != "OK") {
 
         connect = confirm(resp);
@@ -59,7 +63,7 @@ angular.module('myApp', ['angular-ssh']).
       if (connect) {
 
         if (save) {
-          //Save hostkey in known_hosts
+          // Save hostkey in known_hosts
           $ssh.verifyHost($scope.host,"true").then(function(resp){
             console.log("hostkey saved into known_hosts");
           },function(error){
@@ -73,13 +77,14 @@ angular.module('myApp', ['angular-ssh']).
 
           $ssh.write("ls -latr\n").then(function(resp){
 
-            //Ssh connection output is asynchronous buffered so, to get full response, we can do it with a short timeout, a read loop, etc.
+            // Ssh connection output is asynchronous buffered so, to get full response, 
+            // we can do it with a short timeout, a read loop, etc.
             setTimeout(function(){
 
               $ssh.read().then(function(resp){
 
                 $ssh.closeSession();
-                //Here we have connection and "ls -latr" response
+                // Here we have connection and "ls -latr" response
                 alert(resp);
 
               },function(error){
