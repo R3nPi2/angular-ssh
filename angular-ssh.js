@@ -21,7 +21,7 @@ angular.module('angular-ssh', [])
 
   return {
 
-    openSession: function (hostname,username,password,cols,rows) {
+    openSession: function (hostname,username,password,cols,rows,width,height) {
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
         q.reject('cordova-plugin-sshclient not present');
@@ -91,9 +91,9 @@ angular.module('angular-ssh', [])
       return q.promise;
     },
 
-    resizeWindow: function(x,y,pixels_x,pixels_y){
-      var p_x = pixels_x || 0;
-      var p_y = pixels_y || 0;
+    resizeWindow: function(cols,rows,width,height){
+      var width = width || 0;
+      var height = height || 0;
       var q = $q.defer();
       if (!cordovaSshClientIsPresent()) {
         q.reject('cordova-plugin-sshclient not present');
@@ -102,7 +102,7 @@ angular.module('angular-ssh', [])
           q.resolve(response);
         },function(error){
           q.reject(error);
-        },x,y,p_x,p_y);
+        },cols,rows,width,height);
       }
       return q.promise;
     },
